@@ -1,46 +1,54 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { Button } from "./ui/moving-border";
 import { HoverEffect } from "./ui/card-hover-effect";
 
-export const projects = [
+const featuredWebinars = [
   {
-    title: "Stripe",
+    title: "Understanding Music Theory",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Dive deep into the fundamentals of music theory and enhance your musical skills.",
+    slug: "understanding-music-theory",
+    isFeatured: true,
   },
   {
-    title: "Netflix",
+    title: "The Art of Songwriting",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Learn the craft of songwriting from experienced musicians and songwriters.",
+    slug: "the-art-of-songwriting",
+    isFeatured: true,
   },
   {
-    title: "Google",
+    title: "Mastering Your Instrument",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Advanced techniques to master your musical instrument of choice.",
+    slug: "mastering-your-instrument",
+    isFeatured: true,
   },
   {
-    title: "Meta",
+    title: "Music Production Essentials",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "Get started with music production with this comprehensive overview.",
+    slug: "music-production-essentials",
+    isFeatured: true,
+  },
+  // Added two more webinars
+  {
+    title: "Live Performance Techniques",
+    description:
+      "Enhance your live performance skills with expert tips and strategies.",
+    slug: "live-performance-techniques",
+    isFeatured: true,
   },
   {
-    title: "Amazon",
+    title: "Digital Music Marketing",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
-  },
-  {
-    title: "Microsoft",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Learn how to promote your music effectively in the digital age.",
+    slug: "digital-music-marketing",
+    isFeatured: true,
   },
 ];
+
 const UpcommingWebinars = () => {
   return (
     <div className="p-12 bg-gray-700">
@@ -54,7 +62,13 @@ const UpcommingWebinars = () => {
           </p>
         </div>
         <div className="mt-10">
-        <HoverEffect items={projects} />
+          <HoverEffect
+            items={featuredWebinars.map((webinar) => ({
+              title: webinar.title,
+              description: webinar.description,
+              link: webinar.slug,
+            }))}
+          />
         </div>
         <div className="mt-10 text-center">
           <Link href={"/courses"}>

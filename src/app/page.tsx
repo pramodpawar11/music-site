@@ -4,6 +4,7 @@ import FeaturedSection from "@/components/FeaturedSection";
 import Whychooseus from "@/components/Whychooseus";
 import { Ourtestimonials } from "@/components/Ourtestimonials";
 import UpcommingWebinars from "@/components/UpcommingWebinars";
+import InstructorSection from "@/components/InstructorSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Whychooseus />
         <Ourtestimonials />
         <UpcommingWebinars />
+        <InstructorSection/>
       </main>
     </div>
   );
