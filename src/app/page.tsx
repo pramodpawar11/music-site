@@ -5,6 +5,7 @@ import Whychooseus from "@/components/Whychooseus";
 import { Ourtestimonials } from "@/components/Ourtestimonials";
 import UpcommingWebinars from "@/components/UpcommingWebinars";
 import InstructorSection from "@/components/InstructorSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Ourtestimonials />
         <UpcommingWebinars />
         <InstructorSection/>
+        <Footer/>
       </main>
     </div>
   );
